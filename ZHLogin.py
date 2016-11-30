@@ -13,6 +13,7 @@ headers = {
     'Host': 'www.zhihu.com',
     'Referer': 'http://www.zhihu.com/',
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36',
+    'authorization': 'Bearer Mi4wQUFEQWVKOGxBQUFBY0lBaXptMkNDaGNBQUFCaEFsVk45N05rV0FBMjNQYlN2XzZZSlJESWp5djBWU2lBOWt1OVBB|1480402679|559256db1253049b274536d0744a7fade84ea1b5'
 }
 
 
