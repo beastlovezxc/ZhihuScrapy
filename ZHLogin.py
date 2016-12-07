@@ -13,11 +13,14 @@ headers = {
     'Host': 'www.zhihu.com',
     'Referer': 'http://www.zhihu.com/',
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36',
-    'authorization': 'Bearer Mi4wQUFEQWVKOGxBQUFBY0lBaXptMkNDaGNBQUFCaEFsVk45N05rV0FBMjNQYlN2XzZZSlJESWp5djBWU2lBOWt1OVBB|1480402679|559256db1253049b274536d0744a7fade84ea1b5'
+    'authorization': 'Bearer Mi4wQUFEQWVKOGxBQUFBY0lBaXptMkNDaGNBQUFCaEFsVk5VelJ0V0FBU25JS24weHBCY2Y4bUFKSFA4TjczY1lvMG1B|1480960983|2705bef84689512488916df83ade3dc6ddf1f1af'
 }
 
 
 def login():
+    # email = input('请输入登录邮箱->')
+    # password = input('请输入登录密码->')
+
     session = requests.session()
     session.cookies = cookielib.LWPCookieJar(filename='cookies')
     _xsrf = BeautifulSoup(session.get(INDEX_URL, headers=headers).content).find(
@@ -30,7 +33,8 @@ def login():
         # 'captcha': captcha,
     }
     resp = session.post(LOGIN_URL, data, headers=headers)
-    print(resp)
+    if str(resp) == '<Response [200]>':
+        print('登录成功！！！')
     session.cookies.save()
     return session
 
